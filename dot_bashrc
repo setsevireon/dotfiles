@@ -1,0 +1,21 @@
+[[ $- != *i* ]] && return
+
+shopt -s cdspell checkhash checkwinsize cmdhist dirspell extglob globstar histappend
+
+# history
+HISTCONTROL="ignoreboth:erasedups"
+HISTSIZE=1000
+HISTFILESIZE=10000
+HISTTIMEFORMAT='%s '
+
+# completion
+for f in /{etc,usr/share/bash-completion}/bash_completion; do
+    [[ -r ${f} ]] && source "${f}"
+done
+
+# aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# prompt
+PS1='[\u@\h \W]\$ '
