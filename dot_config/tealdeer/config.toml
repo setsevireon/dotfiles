@@ -1,0 +1,25 @@
+[style.description]
+foreground = { ansi = 14 }
+
+[style.example_text]
+italic = true
+
+[style.example_code]
+foreground = { ansi = 10 }
+bold = true
+
+[style.command_name]
+foreground = { ansi = 9 }
+bold = true
+
+[style.example_variable]
+foreground = { ansi = 12 }
+bold = true
+
+[display]
+compact = true
+use_pager = false
+
+[updates]
+auto_update = true
+auto_update_interval_hours = 24
