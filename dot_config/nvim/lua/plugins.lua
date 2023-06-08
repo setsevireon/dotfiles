@@ -11,6 +11,10 @@ return {
     build = ":MasonUpdate",
     config = function() require("mason").setup() end,
   },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function() require("mason-lspconfig").setup() end,
+  },
 
   -- lines
   {
@@ -21,6 +25,27 @@ return {
   -- formatter
   {
     "mhartington/formatter.nvim",
+    init = function() vim.keymap.set("n", "<Leader>f", "<cmd>Format<cr>") end,
     config = function() require("config.formatter") end,
+    cmd = "Format",
+  },
+
+  -- lsp
+  {
+    "neovim/nvim-lspconfig",
+    config = function() require("config.lsp") end,
+  },
+
+  -- completion
+  { "hrsh7th/cmp-nvim-lsp" },
+  { "hrsh7th/cmp-buffer" },
+  { "hrsh7th/cmp-path" },
+  { "hrsh7th/cmp-cmdline" },
+  { "hrsh7th/cmp-vsnip" },
+  { "hrsh7th/vim-vsnip" },
+  {
+    "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    config = function() require("config.completion") end,
   },
 }
