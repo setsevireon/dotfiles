@@ -22,6 +22,12 @@ return {
     config = function() require("config.lualine") end,
   },
 
+  -- coloschemes
+  {
+    "folke/tokyonight.nvim",
+    config = function() vim.cmd("colorscheme tokyonight-night") end,
+  },
+
   -- formatter
   {
     "mhartington/formatter.nvim",
@@ -47,5 +53,12 @@ return {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     config = function() require("config.completion") end,
+  },
+
+  -- syntax
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function() require("config.treesitter") end,
   },
 }
