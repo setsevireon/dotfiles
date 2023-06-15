@@ -43,3 +43,6 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # prompt
 PS1='[\u@\h \W]\$ '
+
+# path
+export PATH="${HOME}/.local/bin:$PATH"
