@@ -1,0 +1,4 @@
+
+- Discover live IPs in a subnet:
+
+`nmap  -sP {{ipaddress}}/{{subnet}}`
