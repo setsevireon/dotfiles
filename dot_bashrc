@@ -11,12 +11,12 @@ PROMPT_COMMAND="history -a; history -c; history -r; ${PROMPT_COMMAND}"
 
 # completion
 for f in /{etc,usr/share/bash-completion}/bash_completion; do
-    [[ -r ${f} ]] && source "${f}"
+	[[ -r ${f} ]] && source "${f}"
 done
 
 # default applications
 for editor in {nvim,vim,vi,nano}; do
-    type "${editor}" &> /dev/null && export EDITOR="${editor}" && break
+	type "${editor}" &>/dev/null && export EDITOR="${editor}" && break
 done
 
 # aliases
@@ -40,10 +40,14 @@ alias mktmp="command cd $(command mktemp -d)"
 
 alias path='echo -e ${PATH//:/\\n}'
 
-
 # prompt
 PS1='[\u@\h \W]\$ '
 
-# paths
-export GOPATH=${HOME}/.local/share/go
-export PATH="${GOPATH}/bin:${HOME}/.local/bin:$PATH"
+# golang
+export GOPATH="${HOME}/.local/share/go"
+export PATH="${GOPATH}/bin:${HOME}/.local/bin:${PATH}"
+
+# javascript
+export NVM_DIR="${HOME}/.nvm"
+[ -s "${NVM_DIR}/nvm.sh" ] && source "${NVM_DIR}/nvm.sh"
+[ -s "${NVM_DIR}/bash_completion" ] && source "${NVM_DIR}/bash_completion"
