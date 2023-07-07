@@ -1,7 +1,12 @@
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [user]
-	email = me@carlosmarx.com
-	name = Carlos Marx
+  email = me@carlosmarx.com
+  name = Carlos Marx
 [alias]
-	foo = checkout -b foo
+  foo = checkout -b foo
+  cb = checkout -g
+  s = status
+  undo = reset HEAD~1 --mixed
+  l = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+  save = !git add -A && git commit -m 'chore: savepoint'
