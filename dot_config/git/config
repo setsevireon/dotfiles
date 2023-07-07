@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	email = me@carlosmarx.com
+	name = Carlos Marx
+[alias]
+	foo = checkout -b foo
