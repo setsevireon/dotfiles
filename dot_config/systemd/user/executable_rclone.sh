@@ -4,6 +4,7 @@ declare -ra DIRS_TO_SYNC=(
   "organize"
   "writing"
   "resume"
+  "templates"
 )
 
 for DIR in "${DIRS_TO_SYNC[@]}"; do
