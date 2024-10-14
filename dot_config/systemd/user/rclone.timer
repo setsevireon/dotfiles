@@ -1,0 +1,10 @@
+[Unit]
+Description=Rclone timer
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+Unit=rclone.service
+
+[Install]
+WantedBy=default.target
